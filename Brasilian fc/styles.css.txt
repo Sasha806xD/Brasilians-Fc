@@ -1,0 +1,45 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+#plantilla {
+    margin-bottom: 20px;
+}
+
+#jugadores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.jugador {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    width: 100px;
+    text-align: center;
+}
+
+#info-jugador {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+}

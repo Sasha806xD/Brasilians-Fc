@@ -1,0 +1,36 @@
+// scripts.js
+document.addEventListener('DOMContentLoaded', function() {
+    const jugadores = [
+        { nombre: 'Jugador 1', posicion: 'Delantero', edad: 24, nacionalidad: 'España' },
+        { nombre: 'Jugador 2', posicion: 'Defensa', edad: 30, nacionalidad: 'Francia' },
+        { nombre: 'Jugador 3', posicion: 'Mediocampista', edad: 27, nacionalidad: 'Brasil' },
+        { nombre: 'Jugador 4', posicion: 'Portero', edad: 22, nacionalidad: 'Italia' },
+        { nombre: 'Jugador 5', posicion: 'Delantero', edad: 24, nacionalidad: 'Argentina' },
+        { nombre: 'Jugador 6', posicion: 'Defensa', edad: 26, nacionalidad: 'Alemania' },
+        { nombre: 'Jugador 7', posicion: 'Mediocampista', edad: 29, nacionalidad: 'Portugal' },
+        { nombre: 'Jugador 8', posicion: 'Portero', edad: 32, nacionalidad: 'México' },
+        { nombre: 'Jugador 9', posicion: 'Delantero', edad: 23, nacionalidad: 'Uruguay' },
+        { nombre: 'Jugador 10', posicion: 'Defensa', edad: 25, nacionalidad: 'Colombia' },
+        { nombre: 'Jugador 11', posicion: 'Mediocampista', edad: 28, nacionalidad: 'Chile' },
+        { nombre: 'Jugador 12', posicion: 'Portero', edad: 27, nacionalidad: 'Perú' },
+        { nombre: 'Jugador 13', posicion: 'Delantero', edad: 21, nacionalidad: 'Paraguay' },
+        { nombre: 'Jugador 14', posicion: 'Defensa', edad: 31, nacionalidad: 'Venezuela' },
+        { nombre: 'Jugador 15', posicion: 'Mediocampista', edad: 26, nacionalidad: 'Ecuador' },
+    ];
+
+    const contenedorJugadores = document.getElementById('jugadores');
+    const detalleJugador = document.getElementById('detalle-jugador');
+
+    jugadores.forEach((jugador, index) => {
+        const divJugador = document.createElement('div');
+        divJugador.className = 'jugador';
+        divJugador.textContent = jugador.nombre;
+        divJugador.draggable = true;
+        divJugador.addEventListener('click', () => mostrarInfoJugador(jugador));
+        contenedorJugadores.appendChild(divJugador);
+    });
+
+    function mostrarInfoJugador(jugador) {
+        detalleJugador.textContent = `Nombre: ${jugador.nombre}\nPosición: ${jugador.posicion}\nEdad: ${jugador.edad}\nNacionalidad: ${jugador.nacionalidad}`;
+    }
+});
